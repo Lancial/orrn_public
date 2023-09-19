@@ -14,7 +14,7 @@ Last time we tested successfully with python 3.7.11, pytorch 1.10.0, and CUDA 11
 
 ## Data preparation
 
-Our model is trained on [4D-Lung](https://wiki.cancerimagingarchive.net/pages/viewpage.action?pageId=21267414) and [SPARE](https://image-x.sydney.edu.au/spare-challenge/) dataset. We provide dataloader in `data.py` file. However, to use them, one have to convert training data to the following format:
+Our model is trained on [4D-Lung](https://wiki.cancerimagingarchive.net/pages/viewpage.action?pageId=21267414) and [SPARE](https://image-x.sydney.edu.au/spare-challenge/) dataset. We provide some dataloader in `data.py` file. However, to use them, one has to convert training data to the following format:
 
 ```
 <dataset_name>:
@@ -28,13 +28,13 @@ Our model is trained on [4D-Lung](https://wiki.cancerimagingarchive.net/pages/vi
         <trial2>:
     <patient2>:
 ```
-and modify the `SEQ_DATA_PATH` variable in `data.py`, for detail, please refer to the paper.
+and modifies the `SEQ_DATA_PATH` variable in `data.py`. For details, please refer to the paper.
 
 
-You can use your own data for training, the training code expect data with shape `(B, 2, H, W, D)` for pair-wise registration, and `(B, 10, H, W, D)` for group-wise registration.
+One can use their own data for training. The training code expects data with shape `(B, 2, H, W, D)` for pair-wise registration, and `(B, 10, H, W, D)` for group-wise registration.
 
 ## Training
-Currently, single level pair-wise and group-wise code is released, multi-leve pair-wise is coming soon.
+Currently, single level pair-wise and group-wise registration code is released, multi-level pair-wise regustration code is coming soon.
 To train the ORRN model:
 
 ```
