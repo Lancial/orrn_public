@@ -1,0 +1,9 @@
+numpy
+SimpleITK
+torchio
+matplotlib
+tensorboard
+monai
+torchdiffeq
+ptflops
+plotly
