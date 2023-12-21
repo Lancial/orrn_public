@@ -34,7 +34,7 @@ and modifies the `SEQ_DATA_PATH` variable in `data.py`. For details, please refe
 One can use their own data for training. The training code expects data with shape `(B, 2, H, W, D)` for pair-wise registration, and `(B, 10, H, W, D)` for group-wise registration.
 
 ## Training
-Currently, single level pair-wise and group-wise registration code is released, multi-level pair-wise regustration code is coming soon.
+Currently, single level pair-wise and group-wise registration code is released, multi-level pair-wise registration code is coming soon.
 To train the ORRN model:
 
 ```
